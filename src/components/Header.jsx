@@ -2,11 +2,14 @@ import React from 'react'
 
 import userIcon from '../assets/static/user-icon.png'
 import logo from '../assets/static/logo-platzi-video-BW2.png'
+import { Link } from 'react-router-dom'
 
 import '../assets/styles/components/Header.scss'
 let Header = () => (
     <header className="header">
-    <img className="header__img" src={logo} alt="Platzi Video" />
+      <Link to="/">
+        <img className="header__img" src={logo} alt="Platzi Video" />
+      </Link>
     <div className="header__menu">
       <div className="header__menu--profile">
         <img src={userIcon} alt="" />
@@ -14,7 +17,7 @@ let Header = () => (
       </div>
       <ul>
         <li><a href="/">Cuenta</a></li>
-        <li><a href="/">Cerrar Sesión</a></li>
+        <Link to="/login">Iniciar Sesión</Link>
       </ul>
     </div>
   </header>

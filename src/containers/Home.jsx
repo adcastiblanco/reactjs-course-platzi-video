@@ -17,7 +17,6 @@ let Home = () =>{
     let initialState = useInitialState('http://localhost:3000/initialState')
     return(
     <div className="App">
-        <Header />
         <Search />
         {initialState.myList !== undefined &&(
         <Categories title="My list">
@@ -39,12 +38,11 @@ let Home = () =>{
                     )}
             </CategoriesContainer>
         </Categories>
-        <Footer/>
     </div>
 )}
-CategoriesItem.propTypes = {
-    title: PropTypes.string,
-    img: PropTypes.string
-}
+    CategoriesItem.propTypes = {
+        title: PropTypes.string,
+        img: PropTypes.string
+    }
 
 export default Home
