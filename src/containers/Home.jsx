@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react' // Manejar estado y manejar peticiones
+import React from 'react' // Manejar estado y manejar peticiones
 
 import Header from '../components/Header'
 import Search from '../components/Search'
@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 
 import '../assets/styles/App.scss'
 
-let App = () =>{
+let Home = () =>{
     let initialState = useInitialState('http://localhost:3000/initialState')
     return(
     <div className="App">
@@ -47,4 +47,4 @@ CategoriesItem.propTypes = {
     img: PropTypes.string
 }
 
-export default App
+export default Home
